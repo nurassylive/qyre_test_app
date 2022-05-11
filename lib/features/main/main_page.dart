@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qyre_test/core/utils/assets.dart';
 import 'package:qyre_test/features/details/details_page.dart';
@@ -40,7 +41,7 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
     return Scaffold(
       body: _widgetOptions.elementAt(_tabController!.index),
       bottomNavigationBar: Container(
-        height: 90,
+        height: 64.h,
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
         ),

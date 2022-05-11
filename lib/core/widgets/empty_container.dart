@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qyre_test/core/widgets/custom_text_button.dart';
 
@@ -39,10 +40,10 @@ class EmptyContainer extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 15,
+                  style: TextStyle(
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xff656565),
+                    color: const Color(0xff656565),
                   ),
                   maxLines: 3,
                   softWrap: true,

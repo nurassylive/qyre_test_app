@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:qyre_test/core/globals/constants.dart';
 import 'package:qyre_test/features/home/models/day.dart';
@@ -7,6 +8,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
   final int index;
   final Day day;
   final bool sameHight;
+
   const AvailabilityCalendarContainer({
     Key? key,
     required this.index,
@@ -23,8 +25,8 @@ class AvailabilityCalendarContainer extends StatelessWidget {
 
   Widget get circleWidget {
     return Container(
-      height: 8,
-      width: 8,
+      height: 8.sp,
+      width: 8.sp,
       decoration: BoxDecoration(
         color: day.active! ? const Color(0xff87c6f5) : const Color(0xffEC4E27),
         borderRadius: BorderRadius.circular(50),
@@ -49,7 +51,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
         color: Theme.of(context).backgroundColor,
       ),
       height: _getHeight,
-      width: 62,
+      width: 62.h,
       child: sameHight
           ? Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -62,7 +64,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                       Text(
                         'TODAY',
                         style: TextStyle(
-                          fontSize: 10,
+                          fontSize: 10.sp,
                           fontWeight: FontWeight.w600,
                           color: theme.textTheme.subtitle1!.color,
                         ),
@@ -70,7 +72,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                     Text(
                       weekday,
                       style: TextStyle(
-                        fontSize: sameHight ? 10 : 12,
+                        fontSize: sameHight ? 10.sp : 12.sp,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
@@ -84,8 +86,8 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                     if (this.day.active != null) const SizedBox(width: 2),
                     Text(
                       '$month $day',
-                      style: const TextStyle(
-                        fontSize: 10,
+                      style: TextStyle(
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.w500,
                         color: Colors.white,
                       ),
@@ -104,7 +106,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                     child: Text(
                       'TODAY',
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 10.sp,
                         fontWeight: FontWeight.w600,
                         color: theme.textTheme.subtitle1!.color,
                       ),
@@ -114,7 +116,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                 Text(
                   weekday,
                   style: TextStyle(
-                    fontSize: sameHight ? 10 : 12,
+                    fontSize: sameHight ? 10.sp : 12.sp,
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
                   ),
@@ -122,8 +124,8 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                 if (sameHight && this.day.active != null) circleWidget,
                 Text(
                   sameHight ? '$month $day' : month,
-                  style: const TextStyle(
-                    fontSize: 10,
+                  style: TextStyle(
+                    fontSize: 10.sp,
                     fontWeight: FontWeight.w500,
                     color: Colors.white,
                   ),
@@ -132,7 +134,7 @@ class AvailabilityCalendarContainer extends StatelessWidget {
                   Text(
                     day,
                     style: TextStyle(
-                      fontSize: sameHight ? 10 : 16,
+                      fontSize: sameHight ? 10.sp : 16.sp,
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),

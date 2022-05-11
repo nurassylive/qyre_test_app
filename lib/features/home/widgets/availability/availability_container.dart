@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qyre_test/core/utils/assets.dart';
 
@@ -18,13 +19,13 @@ class AvailabilityContainer extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 9,
-          width: 268,
+          height: 9.h,
+          width: 268.w,
           decoration: BoxDecoration(color: Theme.of(context).primaryColor),
         ),
         Container(
-          height: 9,
-          width: 268 * status!,
+          height: 9.h,
+          width: (268 * status!).w,
           decoration: const BoxDecoration(color: Color(0xff87c6f5)),
         ),
       ],
@@ -36,8 +37,8 @@ class AvailabilityContainer extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 10),
       padding: const EdgeInsets.all(16),
-      height: 136,
-      width: 300,
+      height: 136.h,
+      width: 300.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         color: const Color(0xfff0f2f5),
@@ -50,7 +51,7 @@ class AvailabilityContainer extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w700,
               color: Theme.of(context).backgroundColor,
             ),
@@ -70,7 +71,7 @@ class AvailabilityContainer extends StatelessWidget {
                     Text(
                       buttonTitle,
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 14.sp,
                         fontWeight: FontWeight.w500,
                         color: Theme.of(context).backgroundColor,
                       ),
